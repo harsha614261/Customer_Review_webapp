@@ -1,0 +1,56 @@
+{% block content %}
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <style>
+        div
+        {
+            padding:9px;
+            margin:35px;
+            background-color:aqua;
+            text-align:center;
+            width:92%;
+            height:75%;
+            float:center;
+        }
+        h1
+        {
+            background-color:pink;
+        }
+        marquee
+        {
+        background-color:green;
+        }
+        a:hover
+        {
+         background-color:green;
+         color:white;
+        }
+    </style>
+<title>
+FORM CREATION
+</title>
+</head>
+<body>
+<div>
+<form method='POST' action="/" onsubmit="return False;">
+    <h1>REVIEW FORM</h1>
+    &nbsp;
+    <marquee scrollamount="11">Please leave your valuable reviews by filling the below form..</marquee>
+    &nbsp;
+    {{ form.csrf_token() }}
+    </br>{{form.Name.label}}
+    </br>{{form.Name}}
+    </br>{{form.Product.label}}
+    </br>{{form.Product}}
+    </br>{{form.Review.label}}
+    </br>{{form.Review}}</br>
+    </br>{{form.Submit()}}
+</form>
+    <h4><a href="https://www.widhya.org">For Previous Reviews: click Here!</a></h4>
+</div>
+<section>
+</section>
+</body>
+</html>
+{% endblock %}

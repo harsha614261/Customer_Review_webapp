@@ -1,0 +1,14 @@
+{%block content%}
+<h1>Thanks for filling the form ,You can find your details below..</h1>
+<table border='1'>
+{% for key,value in result.items() %}
+<tr>
+<th>
+{{key}}
+</th>
+<td>
+{{value}}
+</td>
+</tr>
+{%endfor%}
+{%endblock%}
