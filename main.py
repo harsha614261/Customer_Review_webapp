@@ -24,6 +24,6 @@ def index1():
         result["Product"]=Product
         result["Review"]=Review
         return render_template('review.html',result=result)
-    return render_template('index1.html',form=form1)
+    return render_template('index.html',form=form1)
 if (__name__)=="__main__":
     app.run(debug=True)
